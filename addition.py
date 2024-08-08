@@ -1,0 +1,16 @@
+import cv2
+image=cv2.imread("image.png",cv2.IMREAD_COLOR)
+cv2.imshow("image",image)
+cv2.waitKey(1000)
+cv2.destroyAllWindows()
+image2=cv2.imread("image2.png",cv2.IMREAD_COLOR)
+image2=cv2.resize(image2,(image.shape[1],image.shape[0]))
+cv2.imshow("image2",image2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+image3=cv2.add(image,image2)
+cv2.imshow("hehe",image3)
+cv2.imshow("img1",image)
+cv2.imshow("img2",image2)
+cv2.waitKey(0)
